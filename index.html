@@ -6,7 +6,7 @@
 <title>SpiroTrack | Spirometer Dashboard</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="style.css">
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
@@ -72,10 +72,16 @@ let spirometryChart = new Chart(ctx, {
         }]
     },
     options: {
-        plugins: { legend: { display: false } },
+        plugins: {
+            legend: { display: false }
+        },
         scales: {
-            x: { grid: { color: 'rgba(255,255,255,0.05)' } },
-            y: { grid: { color: 'rgba(255,255,255,0.05)' } }
+            x: {
+                grid: { color: 'rgba(255,255,255,0.05)' }
+            },
+            y: {
+                grid: { color: 'rgba(255,255,255,0.05)' }
+            }
         }
     }
 });
