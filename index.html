@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SpiroTrack | Spirometer Dashboard</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">SpiroTrack</div>
+    <div class="status">● Device Connected</div>
+</header>
+
+<div class="dashboard">
+
+    <!-- Chart Card -->
+    <div class="card">
+        <h2>Live Spirometry Readings</h2>
+        <canvas id="spirometryChart"></canvas>
+
+        <div class="metrics">
+            <div class="metric">
+                <h3 id="fev1">2.8</h3>
+                <span>FEV1 (L)</span>
+            </div>
+            <div class="metric">
+                <h3 id="fvc">3.5</h3>
+                <span>FVC (L)</span>
+            </div>
+            <div class="metric">
+                <h3 id="pef">420</h3>
+                <span>PEF (L/min)</span>
+            </div>
+        </div>
+
+        <button onclick="updateData()">Simulate New Reading</button>
+    </div>
+
+    <!-- Patient Card -->
+    <div class="card patient-info">
+        <h2>Patient Information</h2>
+        <p><strong>Name:</strong> John Doe</p>
+        <p><strong>Age:</strong> 32</p>
+        <p><strong>Height:</strong> 178 cm</p>
+        <p><strong>Diagnosis:</strong> Mild Asthma</p>
+        <p><strong>Last Test:</strong> Today</p>
+        <button>Export Report</button>
+    </div>
+
+</div>
+
+<script>
+const ctx = document.getElementById('spirometryChart');
+
+let spirometryChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ['1','2','3','4','5','6','7'],
+        datasets: [{
+            label: 'Flow Rate',
+            data: [0, 200, 400, 350, 250, 150, 0],
+            borderColor: '#38bdf8',
+            backgroundColor: 'rgba(56,189,248,0.2)',
+            tension: 0.4,
+            fill: true,
+        }]
+    },
+    options: {
+        plugins: { legend: { display: false } },
+        scales: {
+            x: { grid: { color: 'rgba(255,255,255,0.05)' } },
+            y: { grid: { color: 'rgba(255,255,255,0.05)' } }
+        }
+    }
+});
+
+function randomRange(min, max){
+    return (Math.random() * (max - min) + min).toFixed(2);
+}
+
+function updateData(){
+    const newData = [
+        0,
+        randomRange(150,250),
+        randomRange(350,450),
+        randomRange(300,380),
+        randomRange(200,280),
+        randomRange(100,180),
+        0
+    ];
+
+    spirometryChart.data.datasets[0].data = newData;
+    spirometryChart.update();
+
+    document.getElementById("fev1").innerText = randomRange(2.5,3.5);
+    document.getElementById("fvc").innerText = randomRange(3.2,4.2);
+    document.getElementById("pef").innerText = randomRange(380,500);
+}
+</script>
+
+</body>
+</html>
