@@ -13,6 +13,8 @@ Team members can **claim tasks by assigning themselves to an item or opening an 
 ## Task Assignments
 
 <details>
+<summary>Click to expand the task table</summary>
+
 | Task Category | Task | Assigned To | Status |
 |---|---|---|---|
 | Project Setup | Set up GitHub repository structure | @Jeffrey-Yueh | ✅ Complete |
