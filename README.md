@@ -13,24 +13,22 @@ Team members can **claim tasks by assigning themselves to an item or opening an 
 ## Task Assignments
 
 <details>
-<summary>Click to Expand Task Assignment Table</summary>
-
 | Task Category | Task | Assigned To | Status |
 |---|---|---|---|
-| Project Setup | Set up GitHub repository structure | @Jeffrey-Yueh | 🟨 In Progress |
-| Project Setup | Define coding standards | @Jeffrey-Yueh | 🟨 In Progress |
-| Architecture | Create system architecture diagram | @username | ⬜ Not Started |
-| Architecture | Define data flow (sensor → packets → GUI) | @username | ⬜ Not Started |
-| Data Packets | Define packet structure | @username | ⬜ Not Started |
-| Data Packets | Implement packet encoder | @username | ⬜ Not Started |
-| Data Packets | Implement packet decoder | @username | ⬜ Not Started |
-| Data Processing | Implement flow → volume integration | @username | ⬜ Not Started |
-| Communication | Implement serial/USB communication | @username | ⬜ Not Started |
-| Communication | Implement packet parsing pipeline | @username | ⬜ Not Started |
-| GUI | Design GUI layout/wireframe | @username | ⬜ Not Started |
-| GUI | Implement real-time airflow graph | @username | ⬜ Not Started |
-| GUI | Implement volume vs time graph | @username | ⬜ Not Started |
-| GUI | Add start/stop measurement controls | @username | ⬜ Not Started |
+| Project Setup | Set up GitHub repository structure | @Jeffrey-Yueh | ✅ Complete |
+| Project Setup | Define coding standards | @Jeffrey-Yueh | ✅ Complete |
+| Architecture | Create system architecture diagram | @nicqtran | ⬜ Not Started |
+| Architecture | Define data flow (sensor → packets → GUI) | @nicqtran | ⬜ Not Started |
+| Data Packets | Define packet structure | @Sepanta-Yalameha | ⬜ Not Started |
+| Data Packets | Implement packet encoder | @Sepanta-Yalameha | ⬜ Not Started |
+| Data Packets | Implement packet decoder | @Sepanta-Yalameha | ⬜ Not Started |
+| Data Processing | Implement flow → volume integration | @Muhammad-07-cpu | ⬜ Not Started |
+| Communication | Implement serial/USB communication | @Muhammad-07-cpu | ⬜ Not Started |
+| Communication | Implement packet parsing pipeline | @Muhammad-07-cpu | ⬜ Not Started |
+| GUI | Design GUI layout/wireframe | @choudm27 | ⬜ Not Started |
+| GUI | Implement real-time airflow graph | @choudm27 | ⬜ Not Started |
+| GUI | Implement volume vs time graph | @choudm27 | ⬜ Not Started |
+| GUI | Add start/stop measurement controls | @choudm27 | ⬜ Not Started |
 | GUI | Implement data export feature | @username | ⬜ Not Started |
 | Testing | Create simulated spirometer data generator | @username | ⬜ Not Started |
 | Testing | Test packet error handling | @username | ⬜ Not Started |
