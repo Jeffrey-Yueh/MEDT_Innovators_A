@@ -13,7 +13,7 @@ Team members can **claim tasks by assigning themselves to an item or opening an 
 ## Architecture Deliverables
 
 - [System architecture document](./docs/architecture.md)
-- [System architecture diagram](./docs/architecture-diagram.svg)
+- [System architecture diagram](./docs/architecture-diagram.png)
 
 ## Task Assignments
 

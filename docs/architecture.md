@@ -2,7 +2,7 @@
 
 Document refers to Nicolas Tran architecture deliverables for the spirometer software project. It turns the current repo from a static UI mockup into an implementation blueprint the rest of the team can build against.
 
-![Spirometer system architecture](./architecture-diagram.svg)
+![Spirometer system architecture](./architecture-diagram.png)
 
 ## Current Repo State
 
