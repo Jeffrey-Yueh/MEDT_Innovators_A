@@ -10,6 +10,11 @@ This project involves developing a **software interface for a spirometer**, incl
 
 Team members can **claim tasks by assigning themselves to an item or opening an issue referencing it.**
 
+## Architecture Deliverables
+
+- [System architecture document](./docs/architecture.md)
+- [System architecture diagram](./docs/architecture-diagram.png)
+
 ## Task Assignments
 
 <details>
@@ -19,8 +24,8 @@ Team members can **claim tasks by assigning themselves to an item or opening an 
 |---|---|---|---|
 | Project Setup | Set up GitHub repository structure | @Jeffrey-Yueh | ✅ Complete |
 | Project Setup | Define coding standards | @Jeffrey-Yueh | ✅ Complete |
-| Architecture | Create system architecture diagram | @nicqtran | ⬜ Not Started |
-| Architecture | Define data flow (sensor → packets → GUI) | @nicqtran | ⬜ Not Started |
+| Architecture | Create system architecture diagram | @nicqtran | ✅ Complete |
+| Architecture | Define data flow (sensor → packets → GUI) | @nicqtran | ✅ Complete |
 | Data Packets | Define packet structure | @Sepanta-Yalameha | ⬜ Not Started |
 | Data Packets | Implement packet encoder | @Sepanta-Yalameha | ⬜ Not Started |
 | Data Packets | Implement packet decoder | @Sepanta-Yalameha | ⬜ Not Started |
@@ -51,10 +56,10 @@ Team members can **claim tasks by assigning themselves to an item or opening an 
 ---
 
 ## 2. System Architecture
-- [ ] Create high-level system architecture diagram
-- [ ] Define data flow (sensor → packets → processing → GUI)
-- [ ] Select programming language and GUI framework
-- [ ] Define module structure for the codebase
+- [x] Create high-level system architecture diagram
+- [x] Define data flow (sensor → packets → processing → GUI)
+- [x] Select programming language and GUI framework
+- [x] Define module structure for the codebase
 
 ---
 
@@ -114,7 +119,7 @@ Example packet structure:
 - [ ] Packet protocol documentation
 - [ ] GUI user guide
 - [ ] Developer setup instructions
-- [ ] Final system architecture diagram
+- [x] Final system architecture diagram
 - [ ] Project summary and usage instructions
 
 ---
