@@ -1,6 +1,6 @@
 # Spirometer System Architecture
 
-Document refers to Nicolas Tran architecture deliverables for the spirometer software project. It turns the current repo from a static UI mockup into an implementation blueprint the rest of the team can build against.
+This document captures Nicolas Tran's architecture deliverables for the spirometer software project. It turns the current repo from a static UI mockup into an implementation blueprint the rest of the team can build against.
 
 ![Spirometer system architecture](./architecture-diagram.png)
 
@@ -19,8 +19,16 @@ The target system is a desktop-oriented spirometer application built with TypeSc
 - The primary target is a desktop app used during a live spirometry session.
 - The implementation stack should be TypeScript, with Electron as the default desktop shell and the existing HTML/CSS/JS mockup serving as the starting point for the renderer UI.
 - The spirometer connects through serial/USB.
+- The device is expected to emit flow samples at a consistent firmware-controlled sampling rate, with enough timing information in each packet to reconstruct sample spacing.
 - Real-time charts and exported reports both consume processed session data, not raw packets.
+- The processing layer should treat device timestamps and sample order as the source of truth; the UI may render at a lower refresh rate than the incoming samples.
 - The current HTML/CSS mockup is a GUI prototype only; it is not the final application architecture.
+
+### Sampling Assumptions
+
+- Sampling originates at the spirometer device, not in the UI layer.
+- Each packet should include a timestamp or sample index so processing can preserve the original measurement cadence.
+- Flow-to-volume integration should use packet timing from the sampled data stream, not screen refresh timing or button events.
 
 ## Subsystems
 
@@ -95,7 +103,7 @@ type ConnectionState = "disconnected" | "connecting" | "connected" | "error";
 ```text
 docs/
   architecture.md
-  architecture-diagram.svg
+  architecture-diagram.png
 
 src/
   comm/
